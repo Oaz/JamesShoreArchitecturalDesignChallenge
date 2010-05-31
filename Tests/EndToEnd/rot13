@@ -1,2 +1,2 @@
-cp ../../bin/Debug/PartOne.exe .
-mono PartOne.exe $*
+cp ../../bin/Debug/JamesShoreArchitecturalDesignChallenge.exe .
+mono JamesShoreArchitecturalDesignChallenge.exe $*
