@@ -9,7 +9,7 @@ namespace JamesShoreChallenge
 			var config = new CurrentFolderConfiguration();
 			var converter = new Rot13Converter();
 			converter.ExecuteOn(
-			  new FileReader(args[0], config),
+			  new LazyFileReader(args[0], config),
 			  new MultiOutputCharStream(
 			    new FileWriter(args[1], config),
 			    new ConsoleWriter()

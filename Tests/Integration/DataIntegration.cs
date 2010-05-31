@@ -30,6 +30,19 @@ namespace JamesShoreChallenge
 		}
 
 		[Test]
+		public void ReadLazilyFileFromDisk()
+		{
+			var reader = new LazyFileReader( "someInput.txt", new TestConfiguration() );
+			Assert.That( reader.HasChars(), Is.True );
+			Assert.That( reader.GetChar(), Is.EqualTo('A') );
+			Assert.That( reader.HasChars(), Is.True );
+			Assert.That( reader.GetChar(), Is.EqualTo('B') );
+			Assert.That( reader.HasChars(), Is.True );
+			Assert.That( reader.GetChar(), Is.EqualTo('C') );
+			Assert.That( reader.HasChars(), Is.False );
+		}
+
+		[Test]
 		public void WriteFileToDisk()
 		{
 			var config = new TestConfiguration();

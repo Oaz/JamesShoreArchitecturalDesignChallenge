@@ -55,6 +55,7 @@
     <Compile Include="Tests\Unit\Rot13ConverterLogic.cs" />
     <Compile Include="Tests\Integration\DataIntegration.cs" />
     <Compile Include="Tests\Integration\TestConfiguration.cs" />
+    <Compile Include="Code\IO\LazyFileReader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
