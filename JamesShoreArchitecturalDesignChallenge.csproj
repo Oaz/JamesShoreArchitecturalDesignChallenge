@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3217009F-4EA0-4064-828A-B7044AD38714}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>JamesShoreArchitecturalDesignChallenge</RootNamespace>
+    <AssemblyName>JamesShoreArchitecturalDesignChallenge</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Moq, Version=3.1.416.3, Culture=neutral, PublicKeyToken=69f491c39445e920">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Moq\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Code\IO\ConsoleWriter.cs" />
+    <Compile Include="Code\IO\FileReader.cs" />
+    <Compile Include="Code\IO\FileWriter.cs" />
+    <Compile Include="Code\Logic\Rot13Converter.cs" />
+    <Compile Include="Code\Model\Configuration.cs" />
+    <Compile Include="Code\Model\InputCharStream.cs" />
+    <Compile Include="Code\Model\MultiOutputCharStream.cs" />
+    <Compile Include="Code\Model\OutputCharStream.cs" />
+    <Compile Include="Code\CurrentFolderConfiguration.cs" />
+    <Compile Include="Code\Main.cs" />
+    <Compile Include="Tests\Unit\MoqExtensions.cs" />
+    <Compile Include="Tests\Unit\MultiOutput.cs" />
+    <Compile Include="Tests\Unit\Rot13ConverterLogic.cs" />
+    <Compile Include="Tests\Integration\DataIntegration.cs" />
+    <Compile Include="Tests\Integration\TestConfiguration.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="Tests\Integration\someInput.txt" />
+    <None Include="Tests\EndToEnd\a.txt" />
+    <None Include="Tests\EndToEnd\rot13" />
+    <None Include="Tests\EndToEnd\someInput.txt" />
+  </ItemGroup>
+</Project>
