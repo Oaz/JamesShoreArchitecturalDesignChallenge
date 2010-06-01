@@ -1,0 +1,193 @@
+<Project>
+  <Name>JamesShoreArchitecturalDesignChallenge</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Model</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>ConsoleWriter</Name>
+        <Access>Public</Access>
+        <Location left="900" top="544" />
+        <Size width="162" height="111" />
+        <Collapsed>True</Collapsed>
+        <Member type="Method">public Void PutChar(Char c)</Member>
+        <Member type="Constructor">public ConsoleWriter()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FileReader</Name>
+        <Access>Public</Access>
+        <Location left="493" top="467" />
+        <Size width="162" height="162" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private Char[] content</Member>
+        <Member type="Field">private Int32 index</Member>
+        <Member type="Method">public Char GetChar()</Member>
+        <Member type="Method">public Boolean HasChars()</Member>
+        <Member type="Constructor">public FileReader(String fileName, Configuration configuration)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FileWriter</Name>
+        <Access>Public</Access>
+        <Location left="1080" top="544" />
+        <Size width="162" height="128" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private String filePath</Member>
+        <Member type="Method">public Void PutChar(Char c)</Member>
+        <Member type="Constructor">public FileWriter(String fileName, Configuration configuration)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Rot13Converter</Name>
+        <Access>Public</Access>
+        <Location left="662" top="130" />
+        <Size width="499" height="126" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public Void ExecuteOn(InputCharStream inputStream, OutputCharStream outputStream)</Member>
+        <Member type="Method">public Char CharRot13(Char c)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>Configuration</Name>
+        <Access>Public</Access>
+        <Location left="566" top="630" />
+        <Size width="239" height="89" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">String GetDataPath(String fileName)</Member>
+      </Entity>
+      <Entity type="Interface">
+        <Name>InputCharStream</Name>
+        <Access>Public</Access>
+        <Location left="586" top="306" />
+        <Size width="162" height="98" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">Char GetChar()</Member>
+        <Member type="Method">Boolean HasChars()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>MultiOutputCharStream</Name>
+        <Access>Public</Access>
+        <Location left="1267" top="544" />
+        <Size width="168" height="128" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private OutputCharStream[] streams</Member>
+        <Member type="Method">public Void PutChar(Char c)</Member>
+        <Member type="Constructor">public MultiOutputCharStream(params OutputCharStream[] outputStreams)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>OutputCharStream</Name>
+        <Access>Public</Access>
+        <Location left="1080" top="360" />
+        <Size width="162" height="93" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">Void PutChar(Char c)</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>CurrentFolderConfiguration</Name>
+        <Access>Public</Access>
+        <Location left="586" top="787" />
+        <Size width="202" height="111" />
+        <Collapsed>True</Collapsed>
+        <Member type="Method">public String GetDataPath(String fileName)</Member>
+        <Member type="Constructor">public CurrentFolderConfiguration()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>LazyFileReader</Name>
+        <Access>Public</Access>
+        <Location left="685" top="470" />
+        <Size width="162" height="145" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private StreamReader readerImpl</Member>
+        <Member type="Method">public Char GetChar()</Member>
+        <Member type="Method">public Boolean HasChars()</Member>
+        <Member type="Constructor">public LazyFileReader(String fileName, Configuration configuration)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Realization" first="0" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="1" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="2" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="6" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1353</X>
+          <Y>519</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1161</X>
+          <Y>478</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="8" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>683</X>
+          <Y>762</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>683</X>
+          <Y>754</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="9" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="6" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1466</X>
+          <Y>569</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1270</X>
+          <Y>420</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Dependency" first="1" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="9" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="3" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="3" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
