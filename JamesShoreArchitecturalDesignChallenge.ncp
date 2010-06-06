@@ -7,7 +7,7 @@
       <Entity type="Class">
         <Name>ConsoleWriter</Name>
         <Access>Public</Access>
-        <Location left="900" top="544" />
+        <Location left="1292" top="470" />
         <Size width="162" height="111" />
         <Collapsed>True</Collapsed>
         <Member type="Method">public Void PutChar(Char c)</Member>
@@ -17,7 +17,7 @@
       <Entity type="Class">
         <Name>FileReader</Name>
         <Access>Public</Access>
-        <Location left="493" top="467" />
+        <Location left="356" top="449" />
         <Size width="162" height="162" />
         <Collapsed>True</Collapsed>
         <Member type="Field">private Char[] content</Member>
@@ -30,7 +30,7 @@
       <Entity type="Class">
         <Name>FileWriter</Name>
         <Access>Public</Access>
-        <Location left="1080" top="544" />
+        <Location left="1111" top="467" />
         <Size width="162" height="128" />
         <Collapsed>True</Collapsed>
         <Member type="Field">private String filePath</Member>
@@ -41,8 +41,8 @@
       <Entity type="Class">
         <Name>Rot13Converter</Name>
         <Access>Public</Access>
-        <Location left="662" top="130" />
-        <Size width="499" height="126" />
+        <Location left="481" top="97" />
+        <Size width="943" height="126" />
         <Collapsed>False</Collapsed>
         <Member type="Method">public Void ExecuteOn(InputCharStream inputStream, OutputCharStream outputStream)</Member>
         <Member type="Method">public Char CharRot13(Char c)</Member>
@@ -51,7 +51,7 @@
       <Entity type="Interface">
         <Name>Configuration</Name>
         <Access>Public</Access>
-        <Location left="566" top="630" />
+        <Location left="757" top="303" />
         <Size width="239" height="89" />
         <Collapsed>False</Collapsed>
         <Member type="Method">String GetDataPath(String fileName)</Member>
@@ -59,7 +59,7 @@
       <Entity type="Interface">
         <Name>InputCharStream</Name>
         <Access>Public</Access>
-        <Location left="586" top="306" />
+        <Location left="435" top="277" />
         <Size width="162" height="98" />
         <Collapsed>False</Collapsed>
         <Member type="Method">Char GetChar()</Member>
@@ -68,7 +68,7 @@
       <Entity type="Class">
         <Name>MultiOutputCharStream</Name>
         <Access>Public</Access>
-        <Location left="1267" top="544" />
+        <Location left="1463" top="467" />
         <Size width="168" height="128" />
         <Collapsed>True</Collapsed>
         <Member type="Field">private OutputCharStream[] streams</Member>
@@ -79,7 +79,7 @@
       <Entity type="Interface">
         <Name>OutputCharStream</Name>
         <Access>Public</Access>
-        <Location left="1080" top="360" />
+        <Location left="1248" top="282" />
         <Size width="162" height="93" />
         <Collapsed>False</Collapsed>
         <Member type="Method">Void PutChar(Char c)</Member>
@@ -87,7 +87,7 @@
       <Entity type="Class">
         <Name>CurrentFolderConfiguration</Name>
         <Access>Public</Access>
-        <Location left="586" top="787" />
+        <Location left="779" top="467" />
         <Size width="202" height="111" />
         <Collapsed>True</Collapsed>
         <Member type="Method">public String GetDataPath(String fileName)</Member>
@@ -97,7 +97,7 @@
       <Entity type="Class">
         <Name>LazyFileReader</Name>
         <Access>Public</Access>
-        <Location left="685" top="470" />
+        <Location left="510" top="553" />
         <Size width="162" height="145" />
         <Collapsed>True</Collapsed>
         <Member type="Field">private StreamReader readerImpl</Member>
@@ -106,11 +106,25 @@
         <Member type="Constructor">public LazyFileReader(String fileName, Configuration configuration)</Member>
         <Modifier>None</Modifier>
       </Entity>
+      <Entity type="Class">
+        <Name>MainClass</Name>
+        <Access>Internal</Access>
+        <Location left="821" top="772" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Member type="Method">public Void Main(String[] args)</Member>
+        <Member type="Constructor">public MainClass()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
     </Entities>
     <Relationships>
       <Relationship type="Realization" first="0" second="7">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1329</X>
+          <Y>400</Y>
+        </BendPoint>
       </Relationship>
       <Relationship type="Realization" first="1" second="5">
         <StartOrientation>Vertical</StartOrientation>
@@ -124,24 +138,24 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1353</X>
-          <Y>519</Y>
+          <X>1549</X>
+          <Y>442</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>1161</X>
-          <Y>478</Y>
+          <X>1329</X>
+          <Y>400</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Realization" first="8" second="4">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>683</X>
-          <Y>762</Y>
+          <X>876</X>
+          <Y>442</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>683</X>
-          <Y>754</Y>
+          <X>874</X>
+          <Y>427</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Realization" first="9" second="5">
@@ -149,15 +163,17 @@
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
       <Relationship type="Association" first="6" second="7">
+        <Label>
+        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1466</X>
-          <Y>569</Y>
+          <X>1662</X>
+          <Y>492</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>1270</X>
-          <Y>420</Y>
+          <X>1438</X>
+          <Y>342</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
@@ -165,28 +181,120 @@
         <EndMultiplicity>0..*</EndMultiplicity>
       </Relationship>
       <Relationship type="Dependency" first="1" second="4">
-        <Label>
-        </Label>
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>555</X>
+          <Y>471</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>732</X>
+          <Y>349</Y>
+        </BendPoint>
       </Relationship>
       <Relationship type="Dependency" first="9" second="4">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>663</X>
+          <Y>528</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>732</X>
+          <Y>365</Y>
+        </BendPoint>
       </Relationship>
       <Relationship type="Dependency" first="3" second="5">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
       <Relationship type="Dependency" first="3" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="2" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1079</X>
+          <Y>482</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="10" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>748</X>
+          <Y>798</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="10" second="9">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>749</X>
+          <Y>782</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="10" second="8">
         <Label>
         </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>900</X>
+          <Y>726</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="10" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1011</X>
+          <Y>778</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="10" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1050</X>
+          <Y>794</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="10" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1069</X>
+          <Y>811</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="10" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>755</X>
+          <Y>815</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>314</X>
+          <Y>155</Y>
+        </BendPoint>
       </Relationship>
     </Relationships>
   </ProjectItem>
